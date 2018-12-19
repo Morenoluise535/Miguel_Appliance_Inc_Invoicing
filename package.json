@@ -1,0 +1,24 @@
+{
+  "name": "miguel_appliance_inc_invoicing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morenoluise535/Miguel_Appliance_Inc_Invoicing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Morenoluise535/Miguel_Appliance_Inc_Invoicing/issues"
+  },
+  "homepage": "https://github.com/Morenoluise535/Miguel_Appliance_Inc_Invoicing#readme",
+  "dependencies": {
+    "require": "^2.4.20",
+    "sql": "^0.78.0"
+  }
+}
