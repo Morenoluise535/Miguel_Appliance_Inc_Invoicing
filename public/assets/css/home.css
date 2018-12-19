@@ -88,29 +88,7 @@ h1 {
     color: white;
 }
 
-h2 {
-    font-family: "FjallaOne-Regular";
-    font-size: 3em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
-
-.card {
-    margin-top: 4em;
-    margin-bottom: 10em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 1em;
-}
-
-p {
-    font-size: .9em;
-    text-align: justify;
-}
-
 footer {
-    /* display: block;
-    z-index: 1000; */
     position: fixed;
     color: #555;
     background: #fff;

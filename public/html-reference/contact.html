@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Miguel_Appliance_Inc_Invoicing</title>
+    
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/js/mdb.min.js"></script>
+
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="../assets/css/contact.css" media="screen">
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg bg-info">
+    <a class="navbar-brand" a href="home.html">Miguel Appliance Inc.</a>
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="white-text"><i class="fa fa-bars fa-1x"></i></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent41">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<!--Section: Contact v.1-->
+<section class="section pb-5">
+  <div class="container-fluid">
+    <div class="row">
+  
+      <!--Grid column-->
+      <div class="col-lg-5 mb-4">
+  
+        <!--Form with header-->
+        <div class="card">
+          <div class="card-body">
+
+            <!--Header-->
+            <div class="form-header">
+              <h3>Contact</h3>
+            </div>
+  
+            <!--Body-->
+            <div class="md-form">
+              <i class="fa fa-user prefix grey-text"></i>
+              <input type="text" id="form-name" class="form-control">
+              <label for="form-name">Your name</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fa fa-envelope prefix grey-text"></i>
+              <input type="text" id="form-email" class="form-control">
+              <label for="form-email">Your email</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fa fa-tag prefix grey-text"></i>
+              <input type="text" id="form-Subject" class="form-control">
+              <label for="form-Subject">Subject</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fas fa-pencil-alt prefix grey-text"></i>
+              <textarea type="text" id="form-text" class="form-control md-textarea" rows="3"></textarea>
+              <label for="form-text">Textarea</label>
+            </div>
+  
+            <div class="text-center mt-4">
+              <button class="btn btn-submit" id="submit">Submit</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+  
+      <!--Grid column-->
+      <div class="col-lg-7">
+  
+        <!--Google map-->
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.6102922692207!2d-118.31147544948341!3d33.97685478053143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b7d1b132369d%3A0xa26316487e3075f4!2s6903+S+Western+Ave%2C+Los+Angeles%2C+CA+90047!5e0!3m2!1sen!2sus!4v1545195409641" 
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+  
+        <br>
+        <!--Buttons-->
+        <div class="row text-center">
+          <div class="col-md-4">
+            <a class="btn-floating btn-1" id="contact-btn"><i class="fas fa-map-marker"></i></a>
+            <p>6903 S Western Ave</p>
+            <p>Los Angeles, CA 90047</p>
+          </div>
+  
+          <div class="col-md-4">
+            <a class="btn-floating btn-2" id="contact-btn"><i class="fas fa-phone"></i></a>
+            <p>+ 1 323 752 0089</p>
+            <p>Mon - Sat, 9:00-17:00</p>
+          </div>
+  
+          <div class="col-md-4">
+            <a class="btn-floating btn-3" id="contact-btn"><i class="fas fa-envelope"></i></a>
+            <p>MiguelInc6903@gmail.com</p>
+          </div>
+        </div>
+  
+      </div>
+      <!--Grid column-->
+  
+    </div>
+</div>
+</section>
+<!--Section: Contact v.1-->
+
+<!-- Footer -->
+<footer class="footer text-center ">
+    <h6>Copyright Miguel Appliance Inc. @ 2018</h6>
+</footer>
+
+<!-- JS Stylesheet -->
+<!-- <script src="portfolio.js"></script> -->
+
+<!-- jQuery CDN -->
+<script type="text/javascript" href="one-page.js"></script>
+
+</body>
+</html>
