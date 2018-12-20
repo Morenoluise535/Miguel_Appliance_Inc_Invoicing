@@ -2,8 +2,8 @@ const express = require("express");
 const path = require('path')
 const logger = require('morgan');
 const session = require('express-session'); 
-const passport = require("./config/passport");
-const config = require("./config/extra-config");
+// const passport = require("./config/passport");
+// const config = require("./config/extra-config");
 
 
 const app = express();
@@ -35,10 +35,10 @@ app.use(logger('dev'));
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(authCheck);
+// app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
+// app.use(passport.initialize());
+// app.use(passport.session());
+// app.use(authCheck);
 
 require('./routes')(app);
 
