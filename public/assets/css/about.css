@@ -127,10 +127,3 @@ h6 {
     font-weight: 100;
     line-height: .5;
 }
-
-/* Media Queries */
-@media only screen and (max-width: 480px) {
-    #myModal {
-        margin-left: -.8em;
-    }
-}

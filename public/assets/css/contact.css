@@ -170,8 +170,21 @@ h6 {
 }
 
 /* Media Queries */
+@media only screen and (max-width: 960px) {
+    .col-md-4 {
+        margin-bottom: 3em;    
+    }
+ }
+
+@media only screen and (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 5em;
+    }
+ }
+
 @media only screen and (max-width: 480px) {
-    #myModal {
-        margin-left: -.8em;
+    .col-md-4 {
+        margin-top: 1em;
+        margin-bottom: 5em;
     }
 }
