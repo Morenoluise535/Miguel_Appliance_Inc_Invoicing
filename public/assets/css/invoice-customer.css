@@ -1,0 +1,156 @@
+body{
+    background: url("https://www.goodfreephotos.com/albums/united-states/california/los-angeles/night-lights-in-los-angeles-california-cityscape.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "FjallaOne-Regular";
+    src: url('../images/fonts/FjallaOne-Regular.ttf');
+}
+
+.row {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    background: #fff;
+    color: #555;
+    padding: 10px 0 !important;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px 0 rgba(0,0,0,0.12), 0 7px 10px -5px rgba(0,0,0,0.15) !important;
+}
+
+.navbar.bg-info{
+    color: #fff;
+    background: black!important;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.14), 0 7px 12px -5px rgba(0,188,212,0.46);
+}
+
+.navbar.navbar-transparent .navbar-brand{
+    color: #fff;
+}
+
+.navbar .navbar-nav .nav-item .nav-link{
+    color: white;
+    position: relative;
+    color: inherit;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    line-height: 20px;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link{
+    /* background-color: hsla(0,0%,100%,.1); */
+    border-radius: 4px;
+}
+
+.navbar .navbar-brand{
+    color: white;
+    margin-left: 1em;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    color: white;
+    margin-top: .3em;
+}
+
+.navbar-collapse {
+    text-align: right;
+}
+
+.btn {
+    position: relative;
+    padding: 12px 30px !important;
+    margin: .3125rem 1px;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+h1 {
+    font-family: "FjallaOne-Regular";
+    margin-top: 2.3em;    
+    font-size: 6em;
+    color: white;
+}
+
+h3 {
+    font-family: "FjallaOne-Regular";
+    color: white;
+    font-size: 3em;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+/* Table */
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+#navtab {
+    font-family: "FjallaOne-Regular";
+    font-size: 1.25em;
+    border: none;
+    color: black;
+}
+
+#navtab:hover {
+    color: rgb(0, 200, 0);
+}
+
+#navtab.nav-link.active {
+    border-bottom: .1em solid rgb(0, 200, 0);
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+/* End of Table */
+
+footer {
+    position: fixed;
+    color: #555;
+    background: #fff;
+    padding: 25px;
+    font-weight: 300;
+    bottom: 0em;
+    width:100%;
+}
+
+h6 {
+    margin-bottom: 0.25rem;
+    font-family: inherit;
+    font-size: .75em;
+    font-weight: 100;
+    line-height: .5;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+    #myModal {
+        margin-left: -.8em;
+    }
+}
