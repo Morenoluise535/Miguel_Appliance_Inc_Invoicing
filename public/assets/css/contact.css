@@ -70,6 +70,10 @@ body{
     text-align: right;
 }
 
+#form-text {
+    padding-top: 0em;
+}
+
 /* Buttons */
 
 .btn {

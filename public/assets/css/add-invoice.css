@@ -23,6 +23,7 @@ body{
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 8em;
     padding: 1em;
 }
 
@@ -110,6 +111,37 @@ h3 {
     margin-top: 1.5em;
     margin-left: .5em;
 }
+
+/* Form Content */
+
+.form-group {
+    float: left;
+    width: 40%;
+    margin-left: 1.5em;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ced4da;
+}
+
+#service-input, #description-input, #quantity-input.form-control {
+    border: 1px solid #ced4da;
+}
+
+#address-input {
+    width: 150%;
+}
+
+#description-input {
+    width: 150%;
+}
+
+#apt-input, #city-input, #state-input, #zipcode-input, #quantity-input, #price-input {
+    width: 80%;
+}
+
+/* End of Form Content */
 
 footer {
     position: fixed;
