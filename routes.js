@@ -1,4 +1,3 @@
-
 module.exports = function(app){
 
     var home = require("./routes/home");
