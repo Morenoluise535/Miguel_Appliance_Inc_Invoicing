@@ -126,6 +126,7 @@ h3 {
 th {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
+    padding-right: 4em;
 }
 
 /* End of Table */
@@ -149,8 +150,15 @@ h6 {
 }
 
 /* Media Queries */
-/* @media only screen and (max-width: 480px) {
-    #myModal {
-        margin-left: -.8em;
+@media only screen and (max-width: 480px) {
+    h3 {
+        margin-left: -.25em    
     }
-} */
+    #add-invoice {
+        margin: -1em;
+        margin-top: 4.5em;
+    }
+    #navtab {
+        margin-right: -.5em;
+    }
+}  
