@@ -13,21 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" rel="stylesheet">
     
-    <!-- Bootstrap CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/js/mdb.min.js"></script>
-
     <!-- Font Awesome CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
     <!-- Our own CSS stylesheet -->
     <link rel="stylesheet" href="../assets/css/add-invoice.css" media="screen">
-
-    <!-- jQuery CDN -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
 
 </head>
 <body>
@@ -69,35 +60,141 @@
     </div>
         <div class = "card">
             <form action="/action_page.php">
+
+                <!-- First Name Input -->
                 <div class="form-group">
-                    <label for="search-firstname">First Name</label>
-                    <input type="search-firstname" class="form-control" id="firstname-input">
+                    <label for="search-firstname"></label>
+                    <input type="search-firstname" class="form-control" id="firstname-input" placeholder="First Name">
                 </div>
+
+                <!-- Last Name Input -->
                 <div class="form-group">
-                    <label for="search-lastname">Last Name</label>
-                    <input type="search-lastname" class="form-control" id="lastname-input">
+                    <label for="search-lastname"></label>
+                    <input type="search-lastname" class="form-control" id="lastname-input" placeholder="Last Name">
                 </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <!-- Address Input -->
                 <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="address" class="form-control" id="address-input">
+                    <label for="address"></label>
+                    <input type="address" class="form-control" id="address-input" placeholder="Address">
                 </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Apartment Input -->
                 <div class="form-group">
-                    <label for="apt-num">Apt. #</label>
-                    <input type="apt-num" class="form-control" id="apt-input">
+                    <label for="apt-num"></label>
+                    <input type="apt-num" class="form-control" id="apt-input" placeholder="Apt. #">
                 </div>
+
+                <!-- City Input -->
                 <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="city" class="form-control" id="city-input">
+                    <label for="city"></label>
+                    <input type="city" class="form-control" id="city-input" placeholder="City">
                 </div>
+
+                <!-- State Input -->
                 <div class="form-group">
-                    <label for="state">State</label>
-                    <input type="state" class="form-control" id="state-input">
+                    <label for="state"></label>
+                    <input type="state" class="form-control" id="state-input" placeholder="State">
                 </div>
+
+                <!-- Zipcode Input -->
                 <div class="form-group">
-                    <label for="zipcode">Zipcode</label>
-                    <input type="zipcode" class="form-control" id="zipcode-input">
+                    <label for="zipcode"></label>
+                    <input type="zipcode" class="form-control" id="zipcode-input" placeholder="Zipcode">
                 </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Service Input -->
+                <div class="form-group">
+                    <label for="service"></label>
+                        <select class="form-control" id="service-input">
+                            <option value="" selected disabled>Service</option>
+                            <option>Electric</option>
+                            <option>Wi-Fi</option>
+                            <option>Water</option>
+                            <option>Gas</option>
+                            <option>Broken Applicance</option>
+                        </select>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Description Input -->
+                <div class="form-group">
+                    <label for="description"></label>
+                    <textarea class="form-control" id="description-input" rows="5" placeholder="Description..."></textarea>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Quantity Input -->
+                <div class="form-group">
+                    <label for="quantity"></label>
+                        <select class="form-control" id="quantity-input">
+                            <option value="" selected disabled>Quantity</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                </div>
+
+                <!-- Price Input -->
+                <div class="form-group">
+                    <label for="price"></label>
+                    <input type="price" class="form-control" id="price-input" placeholder="Price">
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Labor Input -->
+                <div class="form-group">
+                    <label for="labor"></label>
+                    <input type="labor" class="form-control" id="labor-input" placeholder="Labor">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="text-center mt-4">
                     <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+                </div>
             </form>
     </div>
 </div>          
@@ -106,6 +203,14 @@
 <footer class="footer text-center ">
     <h6>Copyright Miguel Appliance Inc. @ 2018</h6>
 </footer>
+
+<!-- jQuery CDN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://github.com/kswedberg/jquery-smooth-scroll/blob/master/jquery.smooth-scroll.min.js"></script>
+
+<!-- Bootstrap CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>      
