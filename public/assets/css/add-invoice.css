@@ -117,7 +117,7 @@ h3 {
 .form-group {
     float: left;
     width: 40%;
-    margin-left: 1.5em;
+    margin-left: 1em;
 }
 
 .form-control {
@@ -160,3 +160,10 @@ h6 {
     font-weight: 100;
     line-height: .5;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+    #description-input {
+        width: 210%;
+    }
+}    
