@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" rel="stylesheet">
-    
+
     <!-- Font Awesome CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="../assets/css/login.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/registration.css" media="screen">
 
 </head>
 <body>
@@ -67,24 +67,39 @@
                     <div class="modal-body">
                         <form action="/examples/actions/confirmation.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="Email" required="required">		
+                                <input type="text" class="form-control" name="name" placeholder="Full name" required="required">		
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="Password" required="required">	
-                            </div>        
+                                <input type="text" class="form-control" name="email" placeholder="Email" required="required">	
+                            </div> 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+                                <input type="password" class="form-control" name="password" placeholder="Password" required="required">	
+                            </div>  
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password2" placeholder="Re-type password" required="required">	
+                            </div>       
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Register</button>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <a href="registration.html">Sign up!</a>
                     </div>
                 </div>
             </div>
         </div>   
     </div> 
 </div> 
+  
+      <!--Grid Column-->
+      <!-- <div class="col-lg-7">
+      </div> -->
+      <!--End of Grid Column-->
+  
+    </div>
+</div>
+</section>
+<!--Section: Contact v.1-->
 
 <!-- Footer -->
 <footer class="footer text-center ">
