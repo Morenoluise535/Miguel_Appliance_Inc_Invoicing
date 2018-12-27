@@ -9,7 +9,7 @@ var router  = express.Router()
 
 // router.get('/signout', customerController.signOutUser);
 
-// router.get('/signup', customerController.registrationPage);
+// router.get('/signup', customerController.registration);
 // router.post('/signup', customerController.signUpUser);
 
 module.exports = router;
