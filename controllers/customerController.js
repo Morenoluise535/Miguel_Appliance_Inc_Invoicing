@@ -2,12 +2,12 @@ var db = require("../models");
 
 
 
-exports.loginUser = function(req, res) {
+exports.loginCustomer = function(req, res) {
     // the login.js file in the public static files will make a POST request to validate the user
-  res.json("/customer");
+  res.json("/invoices");
 };
 
-exports.signOutUser = function(req,res) {
+exports.signOutCustomer = function(req,res) {
     req.logout();
     res.redirect("/");
 };
@@ -18,20 +18,19 @@ exports.registration = function(req,res) {
     });
 };
 
-exports.signUpUser = function(req,res) {
-
+exports.signUpCustomer = function(req,res) {
+  
     db.customer.findAll({
       where: {username: req.body.username}
-    }).then(function(users) {
-      if (users.length > 0) {
+    }).then(function(customers) {
+      if (customers.length > 0) {
         res.json({
-          duplicateUser: true
+          duplicateCustomer: true
         });
-      //At some point, make sure that only one user can be associated with an email.
       } else {
-        db.User.create({
+        db.Customer.create({
           username: req.body.username,
-          billingAdress: req.body.email,
+          billingAdress: req.body.billingAdress,
           password: req.body.password
         }).then(function() {
           res.send({redirect: '/'});
