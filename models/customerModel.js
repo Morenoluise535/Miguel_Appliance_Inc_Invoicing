@@ -6,16 +6,29 @@ module.exports = function(sequelize, DataTypes) {
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-       validate: {
-        len: [6]
-      } 
     },
     billingAdress: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [8]
-      }
+    },
+
+    billingCity: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    billingState: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [2]
+        }
+    },
+    billingZipCode: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+            len: [5]
+        }
     },
     // The password cannot be null
     password: {
