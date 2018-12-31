@@ -12,8 +12,34 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
         },
 
+        billingAdress: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+        billingCity: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+        billingState: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [2]
+            }
+        },
+
+        billingZipCode: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [5]
+            }
+        },
+        
         // The password cannot be null
-        arrivalDate: {
+        jobDate: {
             type: DataTypes.DATE,
             allowNull: false
         },
@@ -29,12 +55,12 @@ module.exports = function(sequelize, DataTypes) {
         }    
     });
 
-    Trip.associate = function (models) {
-        Trip.belongsTo(models.Customer, {
+    Invoice.associate = function (models) {
+        Invoice.belongsTo(models.Customer, {
             foreignKey: {
                 allowNull: false
             }
         });
     }
-    return Trip;
+    return Invoice;
 }

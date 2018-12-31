@@ -14,7 +14,7 @@ exports.invoiceAll = function(req, res) {
     });
 };
   
-vg6
+
 exports.createInvoice = function(req, res) {
 
     console.log(req.user);

@@ -16,6 +16,6 @@ router.post("/signup", customerController.signUpCustomer);
 
 router.get("/invoice", invoiceController.invoiceAll)
 
-router.post("/invoiceCreate", invoiceController.createInvoice)
+
 
 module.exports = router;
