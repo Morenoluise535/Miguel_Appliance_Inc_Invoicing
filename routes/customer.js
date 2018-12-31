@@ -10,9 +10,9 @@ router.post("/login", passport.authenticate("local"), customerController.loginCu
 
 router.get("/signout", customerController.signOutCustomer);
 
-router.get("/signup", customerController.registration);
+router.get("/registration", customerController.registration);
 
-router.post("/signup", customerController.signUpCustomer);
+router.post("/registration", customerController.signUpCustomer);
 
 // router.get("/invoice", invoiceController.invoiceAll)
 
