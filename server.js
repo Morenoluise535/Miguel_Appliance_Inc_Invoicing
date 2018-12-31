@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+var passport = require("./config/passport");
 
 // Sets up the Express App
 // =============================================================
@@ -13,15 +14,6 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
-
-// // Set Handlebars.
-// var exphbs = require("express-handlebars");
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
-// // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
 
 //set up handlebars
 const exphbs = require('express-handlebars');

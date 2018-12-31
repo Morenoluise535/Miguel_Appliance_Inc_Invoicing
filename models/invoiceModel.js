@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     
-    const Invoice = sequelize.define('Trip', {
+    var Invoice = sequelize.define('Invoice', {
     
         invoice: {
             type: DataTypes.INTEGER,
@@ -29,12 +29,12 @@ module.exports = function(sequelize, DataTypes) {
         }    
     });
 
-    Trip.associate = function (models) {
-        Trip.belongsTo(models.Customer, {
+    Invoice.associate = function (models) {
+        Invoice.belongsTo(models.Customer, {
             foreignKey: {
                 allowNull: false
             }
         });
     }
-    return Trip;
+    return Invoice;
 }
