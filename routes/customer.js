@@ -14,7 +14,7 @@ router.get("/signup", customerController.registration);
 
 router.post("/signup", customerController.signUpCustomer);
 
-router.get("/invoice", invoiceController.invoiceAll)
+// router.get("/invoice", invoiceController.invoiceAll)
 
 
 

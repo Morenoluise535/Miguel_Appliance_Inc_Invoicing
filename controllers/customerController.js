@@ -13,7 +13,7 @@ exports.signOutCustomer = function(req,res) {
 };
 
 exports.registration = function(req,res) {
-    res.render("customer", {
+    res.render("registration/registration", {
         layout: "registration-main"
     });
 };
