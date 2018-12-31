@@ -14,7 +14,6 @@ exports.invoiceAll = function(req, res) {
     });
 };
   
-
 exports.createInvoice = function(req, res) {
 
     console.log(req.user);

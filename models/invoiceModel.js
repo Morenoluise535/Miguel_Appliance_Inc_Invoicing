@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     
-    const Invoice = sequelize.define('Trip', {
+    var Invoice = sequelize.define('Invoice', {
     
         invoice: {
             type: DataTypes.INTEGER,

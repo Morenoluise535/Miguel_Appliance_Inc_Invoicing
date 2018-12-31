@@ -1,13 +1,13 @@
 var express = require('express');
 var router  = express.Router();
 
-// var passport = require("../config/passport");
-// var ownerController = require('../controllers/ownerController');
-// var isAuthenticated = require("../config/middleware/isAuthenticated");
+var passport = require("../config/passport");
+var ownerController = require('../controllers/ownerController');
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-// router.post('/login', passport.authenticate("local"), ownerController.loginUser);
+router.post('/login', passport.authenticate("local"), ownerController.loginUser);
 
-// router.get('/signout', ownerController.signOutUser);
+router.get('/signout', ownerController.signOutUser);
 
 // router.get("/invoice", invoiceController.invoiceAll)
 

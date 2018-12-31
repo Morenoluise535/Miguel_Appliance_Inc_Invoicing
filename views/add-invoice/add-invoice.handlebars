@@ -1,0 +1,149 @@
+{{>nav}}
+<!-- Main Content -->
+<div class= "container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="d-inline-block">Add Invoice</h3>
+        </div>
+    </div>
+        <div class = "card">
+            <form action="/action_page.php">
+
+                <!-- First Name Input -->
+                <div class="form-group">
+                    <label for="search-firstname"></label>
+                    <input type="search-firstname" class="form-control" id="firstname-input" placeholder="First Name">
+                </div>
+
+                <!-- Last Name Input -->
+                <div class="form-group">
+                    <label for="search-lastname"></label>
+                    <input type="search-lastname" class="form-control" id="lastname-input" placeholder="Last Name">
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <!-- Address Input -->
+                <div class="form-group">
+                    <label for="address"></label>
+                    <input type="address" class="form-control" id="address-input" placeholder="Address">
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Apartment Input -->
+                <div class="form-group">
+                    <label for="apt-num"></label>
+                    <input type="apt-num" class="form-control" id="apt-input" placeholder="Apt. #">
+                </div>
+
+                <!-- City Input -->
+                <div class="form-group">
+                    <label for="city"></label>
+                    <input type="city" class="form-control" id="city-input" placeholder="City">
+                </div>
+
+                <!-- State Input -->
+                <div class="form-group">
+                    <label for="state"></label>
+                    <input type="state" class="form-control" id="state-input" placeholder="State">
+                </div>
+
+                <!-- Zipcode Input -->
+                <div class="form-group">
+                    <label for="zipcode"></label>
+                    <input type="zipcode" class="form-control" id="zipcode-input" placeholder="Zipcode">
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Service Input -->
+                <div class="form-group">
+                    <label for="service"></label>
+                        <select class="form-control" id="service-input">
+                            <option value="" selected disabled>Service</option>
+                            <option>Electric</option>
+                            <option>Wi-Fi</option>
+                            <option>Water</option>
+                            <option>Gas</option>
+                            <option>Broken Applicance</option>
+                        </select>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Description Input -->
+                <div class="form-group">
+                    <label for="description"></label>
+                    <textarea class="form-control" id="description-input" rows="5" placeholder="Description..."></textarea>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Quantity Input -->
+                <div class="form-group">
+                    <label for="quantity"></label>
+                        <select class="form-control" id="quantity-input">
+                            <option value="" selected disabled>Quantity</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                </div>
+
+                <!-- Price Input -->
+                <div class="form-group">
+                    <label for="price"></label>
+                    <input type="price" class="form-control" id="price-input" placeholder="Price">
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <!-- Labor Input -->
+                <div class="form-group">
+                    <label for="labor"></label>
+                    <input type="labor" class="form-control" id="labor-input" placeholder="Labor">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+    </div>
+</div>          
+{{>footer}}
