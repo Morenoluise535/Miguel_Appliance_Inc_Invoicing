@@ -22,6 +22,10 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
+const isAuth = require("./config/middleware/isAuthenticated");
+const authCheck = require('./config/middleware/attachAuthenticationStatus');
+
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,9 +33,24 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
+// app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(authCheck);
+
 // Routes
 // =============================================================
 require("./routes")(app);
+
+// error handler
+// no stacktraces leaked to user unless in development environment
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: (app.get('env') === 'development') ? err : {}
+  })
+});
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

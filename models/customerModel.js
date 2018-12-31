@@ -47,11 +47,11 @@ module.exports = function(sequelize, DataTypes) {
   Customer.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   }
-  // Customer.associate = function(models) {
-  //   // associations can be defined here
-  //   Customer.hasMany(models.Invoices, {
-  //     onDelete: "cascade"
-  //   });
-  // }
+  Customer.associate = function(models) {
+    // associations can be defined here
+    Customer.hasMany(models.Invoice, {
+      onDelete: "cascade"
+    });
+  }
   return Customer;
 };
