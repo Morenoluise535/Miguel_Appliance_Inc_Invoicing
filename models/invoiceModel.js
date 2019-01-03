@@ -7,22 +7,41 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         
-        customer: {
+        firstName: {
             type: DataTypes.STRING,
             allowNull: false,
         },
 
-        billingAdress: {
+        lastName: {
             type: DataTypes.STRING,
             allowNull: false,
         },
 
-        billingCity: {
+        address: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                len:[100]
+            }
         },
 
-        billingState: {
+        apt: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [7]
+            }
+        },
+
+        city: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [30]
+            }
+        },
+        
+        state: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -30,19 +49,60 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
-        billingZipCode: {
+        zipCode: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 len: [5]
             }
         },
-        
+
+        service: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [30]
+            }
+        },
+
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [500]
+            }
+        },
+
+        quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [2]
+            }
+        },
+
+        price: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [10]
+            }
+        },
+
+        labor: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                len: [10]
+            }
+        },
+
         // The password cannot be null
         jobDate: {
             type: DataTypes.DATE,
             allowNull: false
         },
+
 
         dueDate: {
             type: DataTypes.DATE,
