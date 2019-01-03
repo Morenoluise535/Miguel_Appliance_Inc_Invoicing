@@ -20,23 +20,23 @@ exports.registration = function(req,res) {
 
 exports.signUpCustomer = function(req,res) {
   
-    db.customer.findAll({
-      where: {username: req.body.username}
-    }).then(function(customers) {
-      if (customers.length > 0) {
-        res.json({
-          duplicateCustomer: true
-        });
-      } else {
-        db.Customer.create({
-          username: req.body.username,
-          billingAdress: req.body.billingAdress,
-          password: req.body.password
-        }).then(function() {
-          res.send({redirect: '/'});
-        }).catch(function(err) {
-          res.json(err);
-        });
-      }
-    })
-  };
+  db.customerModel.findAll({
+    where: {customerID: req.body.email}
+  }).then(function(customers) {
+    if (customers.length > 0) {
+      res.json({
+        duplicateCustomer: true
+      });
+    } else {
+      db.customerModel.create({
+        customerID: req.body.email,
+        name: req.body.name,
+        password: req.body.password
+      }).then(function() {
+        res.send({redirect: "/login"});
+      }).catch(function(err) {
+        res.json(err);        
+      });
+    }
+  })
+};

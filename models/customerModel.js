@@ -2,33 +2,14 @@
 var bcrypt = require("bcrypt-nodejs");
 
 module.exports = function(sequelize, DataTypes) {
-  var Customer = sequelize.define('Customer', {
-    username: {
+  var Customer = sequelize.define("customerTable", {
+    customerID: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    billingAdress: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-
-    billingCity: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    billingState: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [2]
-        }
-    },
-    billingZipCode: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-            len: [5]
-        }
     },
     // The password cannot be null
     password: {
@@ -49,9 +30,9 @@ module.exports = function(sequelize, DataTypes) {
   }
   Customer.associate = function(models) {
     // associations can be defined here
-    Customer.hasMany(models.Invoice, {
+    Customer.hasMany(models.invoiceTable, {
       onDelete: "cascade"
     });
   }
   return Customer;
-};
+}

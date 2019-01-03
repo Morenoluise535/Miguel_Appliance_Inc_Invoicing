@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     
-    var Invoice = sequelize.define('Invoice', {
+    var Invoice = sequelize.define("invoiceTable", {
     
         invoice: {
             type: DataTypes.INTEGER,
@@ -116,7 +116,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Invoice.associate = function (models) {
-        Invoice.belongsTo(models.Customer, {
+        Invoice.belongsTo(models.customerTable, {
             foreignKey: {
                 allowNull: false
             }

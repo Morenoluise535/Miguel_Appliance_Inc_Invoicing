@@ -11,7 +11,7 @@ $(document).ready(function() {
         }
 
 
-        //Add a way to differentiate between owner and custome login info
+        //Add a way to differentiate between owner and customer login info
 
 
 

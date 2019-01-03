@@ -3,25 +3,25 @@ var db  = require("../models");
 exports.invoiceAll = function(req, res) {
     db.Invoice.findAll({
         where: {
-            UserId: req.user.id
+            customerID: req.customer.id
         }
-    }).then(function(invoiceDB) {
-        console.log(invoiceDB);
-        res.render("", {
+    }).then(function(MiguelAppliance_db) {
+        console.log(MiguelAppliance_db);
+        res.render("add-invoice", {
             layout: "invoice-customer-main",
-            invoice: invoiceDB
+            invoice: MiguelAppliance_db
         });
     });
 };
   
 exports.createInvoice = function(req, res) {
 
-    console.log(req.user);
+    console.log(req.customer);
     // Add id from User onto req.body
-    req.body.UserId = req.user.id;
+    req.body.customerID = req.customer.id;
   
-    db.Invoice.create(req.body).then(function(invoiceDB) {
-      res.json(invoiceDB);
+    db.Invoice.create(req.body).then(function(MiguelAppliance_db) {
+      res.json(MiguelAppliance_db);
     });
   };
   

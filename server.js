@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var passport = require("./config/passport");
+var path = require ("path");
 
 // Sets up the Express App
 // =============================================================
@@ -14,6 +15,9 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
+
+//Juan added this to try to fix error
+app.set("views", path.join(__dirname, "views"));
 
 //set up handlebars
 const exphbs = require('express-handlebars');
@@ -31,7 +35,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static("public"));
+// app.use(express.static("public"));
+
+//Juan added this and commented out above to try to fix error
+app.use(express.static(path.join(__dirname, "public")));
 
 // app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
