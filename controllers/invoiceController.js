@@ -7,7 +7,7 @@ exports.invoiceAll = function(req, res) {
         }
     }).then(function(MiguelAppliance_db) {
         console.log(MiguelAppliance_db);
-        res.render("add-invoice", {
+        res.render("add-invoice/add-invoice", {
             layout: "invoice-customer-main",
             invoice: MiguelAppliance_db
         });
