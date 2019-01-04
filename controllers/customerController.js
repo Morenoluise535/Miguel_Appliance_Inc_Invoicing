@@ -33,8 +33,9 @@ exports.signUpCustomer = function(req,res) {
         name: req.body.name,
         password: req.body.password
       }).then(function() {
-        res.send({redirect: "/login"});
+        res.send({redirect: "/"});
       }).catch(function(err) {
+        console.log("err")
         res.json(err);        
       });
     }
