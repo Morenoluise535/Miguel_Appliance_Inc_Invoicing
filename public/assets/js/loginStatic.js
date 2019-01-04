@@ -1,10 +1,13 @@
 $(document).ready(function() {
     var submitButton = $(".submit");
-    var emailInput = $(".emailInput");
-    var passwordInput = $(".passwordInput");
 
     submitButton.on("click", function (event){
         event.preventDefault();
+       
+        var emailInput = $(".emailInput");
+        var passwordInput = $(".passwordInput");
+
+      
         var userInfo = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()

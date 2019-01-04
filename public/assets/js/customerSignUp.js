@@ -42,8 +42,8 @@ $(document).ready(function () {
 
     function signUpCustomer(name, email, password) {
         $.post("/customer/registration", {
-            customerID: email,
             name: name,
+            email: email,
             password: password
         }).then (function(data) {
             if (data.duplicateUser) {

@@ -2,12 +2,12 @@
 var bcrypt = require("bcrypt-nodejs");
 
 module.exports = function(sequelize, DataTypes) {
-  var Customer = sequelize.define("customerTable", {
-    customerID: {
+  var Customer = sequelize.define("Customer", {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    name: {
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
   }
   Customer.associate = function(models) {
     // associations can be defined here
-    Customer.hasMany(models.invoiceTable, {
+    Customer.hasMany(models.Invoice, {
       onDelete: "cascade"
     });
   }
