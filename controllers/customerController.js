@@ -20,16 +20,16 @@ exports.registration = function(req,res) {
 
 exports.signUpCustomer = function(req,res) {
   
-  db.customerModel.findAll({
-    where: {customerID: req.body.email}
+  db.Customer.findAll({
+    where: {email: req.body.email}
   }).then(function(customers) {
     if (customers.length > 0) {
       res.json({
         duplicateCustomer: true
       });
     } else {
-      db.customerModel.create({
-        customerID: req.body.email,
+      db.Customer.create({
+        email: req.body.email,
         name: req.body.name,
         password: req.body.password
       }).then(function() {
