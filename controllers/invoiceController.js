@@ -16,8 +16,12 @@ exports.invoiceAll = function(req, res) {
 exports.createInvoice = function(req, res) {
 
     console.log(req.customer);
-    // Add id from User onto req.body
-    req.body.email = req.customer.id;
+
+    req.body.customerID = req.customer.id;
+
+//     // Add id from User onto req.body
+//     req.body.email = req.customer.id;
+
   
     db.Invoice.create(req.body).then(function(MiguelAppliance_db) {
       res.json(MiguelAppliance_db);
