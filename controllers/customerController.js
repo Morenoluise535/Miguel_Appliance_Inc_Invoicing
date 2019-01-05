@@ -4,8 +4,9 @@ var db = require("../models");
 
 exports.loginCustomer = function(req, res) {
     // the login.js file in the public static files will make a POST request to validate the user
-  
+
   res.json("/");
+
   console.log("You're logged in!");
   
 };
