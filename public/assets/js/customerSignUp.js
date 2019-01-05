@@ -4,6 +4,8 @@ $(document).ready(function () {
     
     submitButton.on("click", function(event){
 
+        event.preventDefault();
+
         var fullNameInput = $("input#fullName").val().trim();
         var emailInput = $("input#email").val().trim();
         var passwordInput = $("input#password").val().trim();
@@ -41,16 +43,22 @@ $(document).ready(function () {
     })
 
     function signUpCustomer(name, email, password) {
+     
         $.post("/customer/registration", {
             name: name,
             email: email,
             password: password
         }).then (function(data) {
+            console.log(data);
+            
             if (data.duplicateUser) {
                 alert("You're e-mail has already been registered.")
             }
-            else{
-                window.location = data.redirect;
+            else{            
+                console.log(data.redirect);
+                    
+                window.location.href = data.redirect;  
+                               
             }
         }).catch(function(err){
             console.log(err);

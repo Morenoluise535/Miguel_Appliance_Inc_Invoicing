@@ -1,6 +1,4 @@
-// exports.index = function(req, res) {
-//     res.render("loginHandlebar");
-// };
+//This renders the login page only
 
 var db = require("../models")
 
