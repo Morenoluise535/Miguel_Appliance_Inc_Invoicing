@@ -1,13 +1,10 @@
 $(document).ready(function() {
     var submitButton = $(".submit");
+    var emailInput = $(".emailInput");
+    var passwordInput = $(".passwordInput");
 
     submitButton.on("click", function (event){
         event.preventDefault();
-       
-        var emailInput = $(".emailInput");
-        var passwordInput = $(".passwordInput");
-
-      
         var userInfo = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
@@ -19,6 +16,8 @@ $(document).ready(function() {
 
 
         loginUser(userInfo.email, userInfo.password);
+        console.log("We are logged in!!!!");
+        
         emailInput.val("");
         passwordInput.val("");        
     })
