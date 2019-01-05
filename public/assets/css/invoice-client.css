@@ -7,7 +7,7 @@ body{
 
 @font-face {
     font-family: "FjallaOne-Regular";
-    src: url('../images/fonts/FjallaOne-Regular.ttf');
+    src: url('../fonts/FjallaOne-Regular.ttf');
 }
 
 .row {
