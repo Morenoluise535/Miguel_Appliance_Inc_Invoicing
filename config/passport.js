@@ -1,9 +1,16 @@
 // var passport = require('passport')
-//   , LocalStrategy = require('passport-local').Strategy;
+// var LocalStrategy = require('passport-local').Strategy;
 
-// passport.use(new LocalStrategy(
-//   function(useremail, password, done) {
-//     User.findOne({ useremail: useremail }, function (err, user) {
+// var db = require("../models")
+
+// // passport.use(new LocalStrategy(
+// <<<<<<< extrahbs
+// //   function(useremail, password, done) {
+// //     User.findOne({ useremail: useremail }, function (err, user) {
+// =======
+// //   function(email, password, done) {
+// //     User.findOne({ email: email }, function (err, user) {
+// >>>>>>> master
 //       if (err) { return done(err); }
 //       if (!user) {
 //         return done(null, false, { message: 'Incorrect username.' });
@@ -26,7 +33,11 @@ var db = require("../models");
 passport.use(new LocalStrategy(
   // Our user will sign in using an email, rather than a "username"
   {
-    usernameField: "email"
+// <<<<<<< extrahbs
+//     usernameField: "email"
+// =======
+    usernameField: "email",
+// >>>>>>> master
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs
@@ -35,10 +46,17 @@ passport.use(new LocalStrategy(
         email: email
       }
     }).then(function(dbCustomer) {
-      // If there's no user with the given useremail
+// <<<<<<< extrahbs
+//       // If there's no user with the given useremail
+//       if (!dbCustomer) {
+//         return done(null, false, {
+//           message: "Incorrect useremail."
+// =======
+      // If there's no user with the given email
       if (!dbCustomer) {
         return done(null, false, {
-          message: "Incorrect useremail."
+          message: "Incorrect email."
+// >>>>>>> master
         });
       }
       // If there is a user with the given useremail, but the password the user gives us is incorrect
