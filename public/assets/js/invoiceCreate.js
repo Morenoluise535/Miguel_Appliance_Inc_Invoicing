@@ -19,6 +19,7 @@ $document.ready(function () {
     //May add passwordRegEx to validate password format if establishes
 
     submitButton.on("click", function(event){
+        event.preventDefault();
 
         var newInvoice = {
             firstName: firstNameInput.val().trim(),

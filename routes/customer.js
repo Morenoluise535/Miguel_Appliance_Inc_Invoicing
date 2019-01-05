@@ -14,6 +14,6 @@ router.get("/registration", customerController.registration);
 
 router.post("/registration", customerController.signUpCustomer);
 
-router.get("/invoice", invoiceController.invoiceAll)
+router.get("/invoice", isAuthenticated, invoiceController.invoiceAll)
 
 module.exports = router;

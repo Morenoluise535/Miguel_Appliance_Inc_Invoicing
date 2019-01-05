@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    var submitButton = $(".submit");
+    var submitButton = $("#submit");
 
     submitButton.on("click", function (event){
         event.preventDefault();
        
-        var emailInput = $(".emailInput");
-        var passwordInput = $(".passwordInput");
+        var emailInput = $("#emailLogin");
+        var passwordInput = $("#passwordLogin");
 
       
         var userInfo = {
@@ -13,9 +13,7 @@ $(document).ready(function() {
             password: passwordInput.val().trim()
         }
 
-
-        //Add a way to differentiate between owner and customer login info
-
+        //Add a way to differentiate between owner and customer login info        
 
 
         loginUser(userInfo.email, userInfo.password);
@@ -28,9 +26,8 @@ $(document).ready(function() {
             email: email,
             password: password
         }).then(function (data) {
+            console.log(data);
             window.location.replace(data)
-        }).catch(function(err){
-            alert("Incorrect email or password.")
         })
     }
 
