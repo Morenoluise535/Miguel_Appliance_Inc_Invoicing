@@ -24,13 +24,11 @@
             <div class="tab-content">
 
               <!-- Recent Tab -->
-            {{#if Invoices}}
-            {{#each Invoices}}
               <div id="recent" class="container tab-pane active"><br>
                 <table id="table" class="table-responsive table-striped">
                     <thead>
                       <tr>
-                        <th scope="col">Invoice {{this.DataValue.id}}</th>
+                        <th scope="col">Invoice {{this.DataValue.invoice}}</th>
                         <th scope="col">Customer</th>
                         <th scope="col">Date</th>
                         <th scope="col">Due Date</th>
@@ -42,8 +40,6 @@
                     </thead>
                 </table>
               </div>
-              {{/each}}
-              {{/if}}
 
               <!-- Due Tab -->
               <div id="due" class="container tab-pane fade"><br>
