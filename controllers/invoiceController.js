@@ -1,11 +1,15 @@
 var db  = require("../models");
 
-exports.invoiceAll = function(req, res) {
+
+exports.invoiceAll = function(req, res) {    
+
     db.Invoice.findAll({
         where: {
             id: 1
         }
     }).then(function(MiguelAppliance_db) {
+        // console.log("From Invoice Controller: " + MiguelAppliance_db);
+        
         res.render("invoice-customer/invoice-customer", {
             layout: "invoice-customer-main",
             invoice: MiguelAppliance_db

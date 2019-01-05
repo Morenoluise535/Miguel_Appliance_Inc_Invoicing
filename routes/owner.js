@@ -10,8 +10,8 @@ router.post('/login', passport.authenticate("local"), ownerController.loginUser)
 
 router.get('/signout', ownerController.signOutUser);
 
-router.get("/invoice", isAuthenticated, invoiceController.invoiceAll)
+router.get("/invoice", invoiceController.invoiceAll)
 
-router.post("/invoiceCreate", isAuthenticated, invoiceController.createInvoice)
+router.post("/invoiceCreate", invoiceController.createInvoice)
 
 module.exports = router;
